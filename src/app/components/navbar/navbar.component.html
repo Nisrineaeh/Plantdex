@@ -1,16 +1,16 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary shadow">
+<nav class="navbar navbar-expand-sm bg-body-tertiary shadow">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">🪴Plantdex</a>
+        <a class="navbar-brand" [routerLink]="['']">🪴Plantdex</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-link active" aria-current="page" href="#">Accueil</a>
-                <a class="nav-link" href="#">Mes plantes</a>
-                <a class="nav-link" href="#">Espace Admin</a>
-                <a class="nav-link disabled">A venir ...</a>
+                <a class="nav-link" aria-current="page" routerLinkActive="ma-classe-active" [routerLink]="['home']">Accueil</a>
+                <a class="nav-link" routerLinkActive="ma-classe-active" [routerLink]="['my-plants']">Mes plantes</a>
+                <a class="nav-link" routerLinkActive="ma-classe-active" [routerLink]="['admin']">Espace Admin</a>
+                <a class="nav-link disabled" >A venir ...</a>
             </div>
         </div>
     </div>
