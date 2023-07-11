@@ -1,31 +1,4 @@
-html,
-body {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  color: #541bc1;
-  font-size: 18px;
-  font-family: "Nunito", sans-serif;
-  font-weight: 700;
-}
-
-body::after {
-  content: "";
-  background: url('https://ae01.alicdn.com/kf/HTB1I_FvOXXXXXXCaFXXq6xXFXXX7/Fuga-de-Rick-e-Morty-Hot-Anima-o-Dos-Desenhos-Animados-Poster-Retro-Do-Vintage-Da.jpg') no-repeat center center fixed;  
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  opacity: 0.4;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;
-}
-
-.svgcontainer {
+.svgcontainer, svg#fourohfour {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -142,10 +115,10 @@ svg#picklerick .st4 {
 
 .btn{
     font-family: 'Helvetica', 'Arial', sans-serif;
-    font-weight: bold;
+    font-weight: bolder;
     color: green;
   display: inline-block;
-  font-size: 1em;
+  font-size: 0.5em;
   padding: 1em 2em;
   margin-top: 100px;
   margin-bottom: 60px;
