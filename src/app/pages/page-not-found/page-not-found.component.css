@@ -37,6 +37,7 @@ body::after {
   font-size: 35px;
 }
 .topconvo span{
+  font-weight: bolder;
   color: green;
 }
 .bottomconvo{
@@ -136,4 +137,22 @@ svg#picklerick .st4 {
     svg#picklerick {
         width: 240px;
     }
+}
+
+
+.btn{
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-weight: bolder;
+    color: green;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 25px #008013;
 }
