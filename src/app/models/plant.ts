@@ -3,5 +3,6 @@ export interface Plant {
     nom:string;
     soleil:string;
     arrosage:number;
+    categorie:string;
     image: string;
 }

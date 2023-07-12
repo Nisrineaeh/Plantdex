@@ -1,5 +1,3 @@
 <div class="container-plants">
-    <ul>
-        <li *ngFor="let plant of plantsRecupDeLaHome">{{ plant.nom }}</li>
-    </ul>
+    <app-card *ngFor="let plant of plantsRecupDeLaHome" [maplante]="plant"></app-card>
 </div>
