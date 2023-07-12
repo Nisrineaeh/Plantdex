@@ -1,9 +1,10 @@
-<div class="container">
+<div class="container row">
     <h1 class="title">Plantdex</h1>
     <!-- <div class="container-plants">
         <ul>
             <li *ngFor="let plant of plantsToDisplay">{{ plant.nom }}</li>
         </ul>
     </div> -->
-    <app-plant-list [plantsRecupDeLaHome]="plantsToDisplay"></app-plant-list>
+    <app-filter-bar class="col-2"></app-filter-bar>
+    <app-plant-list [plantsRecupDeLaHome]="plantsToDisplay" class="col-10"></app-plant-list>
 </div>
