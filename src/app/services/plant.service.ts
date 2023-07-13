@@ -14,7 +14,4 @@ export class PlantService {
     return this.http.get<Plant[]>('http://localhost:3000/plants');
   }
 
-  // getCatégories(): Observable<Plant['categorie']>{
-  //   return this.http.get<Plant['categorie']>('http://localhost:3000/plants');
-  // }
 }

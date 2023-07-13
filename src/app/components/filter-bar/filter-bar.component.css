@@ -1,0 +1,13 @@
+.filter-bar.form-check{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+h2{
+    margin-top: 20px;
+}
+
+input{
+    margin-right: 10px;
+}

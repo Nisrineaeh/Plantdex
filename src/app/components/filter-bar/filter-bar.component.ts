@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+
 
 @Component({
   selector: 'app-filter-bar',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./filter-bar.component.css']
 })
 export class FilterBarComponent {
-
+  @Input() plantsCategorie!: string[];
 }

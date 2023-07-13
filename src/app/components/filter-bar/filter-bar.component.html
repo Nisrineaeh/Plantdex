@@ -1,1 +1,15 @@
-<p>filter-bar works!</p>
+<h2>Filtres</h2>
+
+<div class="filter-bar form-check" *ngFor="let categorie of plantsCategorie">
+            <input type="checkbox"
+                id="{{categorie}}"
+                value="{{categorie}}" 
+                class="form-check">
+        
+
+        <label class ="form-check-label" for="{{categorie}}" >
+            {{categorie}}
+        </label>
+</div>
+
+
