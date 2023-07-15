@@ -17,6 +17,7 @@ export class PageHomeComponent implements OnInit {
 
     ngOnInit(){
       this.plantService.getPlants().subscribe((data)=>{
+        // console.log(data);
         this.plantsToDisplay = data;
         this.plantsCategorie = [...new Set(this.plantsToDisplay.map((plant)=> plant.categorie))]
         console.log(this.plantsCategorie);
