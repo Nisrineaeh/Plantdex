@@ -24,7 +24,7 @@ export class PageHomeComponent implements OnInit {
       });
     }
       aLecouteDeLenfant(categoriesChecked: string[]) {
-        
+        this.plantsToDisplay = this.plantsToDisplay.filter((plant)=> categoriesChecked.includes(plant.categorie));
     }
 }
 
