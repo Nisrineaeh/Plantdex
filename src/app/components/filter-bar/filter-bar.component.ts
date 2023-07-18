@@ -9,7 +9,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class FilterBarComponent {
   @Input() plantsCategorie!: string[];
   categoriesChecked : string[]=[];
-  @Output() myItemEvent = new EventEmitter<string[]>();
+  @Output() categItemEvent = new EventEmitter<string[]>();
 
      onCheckCategory(e: Event) {
      console.log(e);     
@@ -30,7 +30,7 @@ export class FilterBarComponent {
      }
      console.log(this.categoriesChecked);
      // .emit() de notre output devra ce faire a la fin de cet methode
-       this.myItemEvent.emit(this.categoriesChecked);
+       this.categItemEvent.emit(this.categoriesChecked);
      
     }
 }
