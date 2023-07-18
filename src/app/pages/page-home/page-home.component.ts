@@ -11,7 +11,6 @@ export class PageHomeComponent implements OnInit {
 
   plantsToDisplay!: Plant[];
   plantsCategorie!: string[];
-  filterCategorie!: string[];
   allPlant: Plant[]=[];
 
     constructor(private plantService : PlantService){}
@@ -27,14 +26,9 @@ export class PageHomeComponent implements OnInit {
     }
       aLecouteDeLenfant(categoryChild: string[]) {
         console.log('categoryChild', categoryChild)
-        // if(categoryChild.length === 0){
-        //   this.plantsToDisplay=[...this.allPlant];
-        // }else{
-          let plantFiltrer :Plant[] = [...this.allPlant];
-
-          this.plantsToDisplay = plantFiltrer.filter((plant)=> categoryChild.includes(plant.categorie))
-         
         
-    
+          let plantFiltrer :Plant[] = [...this.allPlant];
+          this.plantsToDisplay = plantFiltrer.filter((plant)=> categoryChild.includes(plant.categorie))
+             
     }
 }
