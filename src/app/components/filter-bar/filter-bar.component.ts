@@ -10,6 +10,8 @@ export class FilterBarComponent {
   @Input() plantsCategorie!: string[];
   categoriesChecked : string[]=[];
   @Output() categItemEvent = new EventEmitter<string[]>();
+  searchOption! : string;
+  @Output() onEnterSearch = new EventEmitter<string>();
 
      onCheckCategory(e: Event) {
      console.log(e);     
@@ -33,4 +35,20 @@ export class FilterBarComponent {
        this.categItemEvent.emit(this.categoriesChecked);
      
     }
+
+    onSearch(e: Event){
+      console.log(e,`ca c'est ton e`);
+      const target = e.target as HTMLInputElement;
+      console.log(`L'utilisateur recherche : `, target.value);
+      if(target.value != ""){
+        this.searchOption = target.value;
+      }else{
+        this.searchOption = "";
+      }
+      console.log(this.searchOption);
+      //emit de mon output
+      this.onEnterSearch.emit(this.searchOption);
+    }
+
+    
 }

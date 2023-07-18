@@ -12,7 +12,7 @@
 
 h2{
     margin-top: 20px;
-    color: green;
+    color: #188754;
     display: flex;
     justify-content: center;
     padding-bottom: 20px;
@@ -20,4 +20,26 @@ h2{
 
 input{
     margin-right: 10px;
+}
+
+input:focus{
+    border-color: #188754;
+
+}
+.btn{
+    margin-top: 10px;
+    background-color: #188754;
+    border-color: #188754;
+    display: flex;
+    justify-content: center;
+}
+
+.btn:focus{
+    background-color: green;
+}
+
+.search{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
 }

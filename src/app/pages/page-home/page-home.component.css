@@ -14,8 +14,8 @@ h1{
 h1{
     display: flex;
     justify-content: center;
-    color:green;
-    /* text-shadow: 1px 2px 15px green; */
+    color:#188754;
+    /* text-shadow: 1px 2px 15px #188754; */
     font-size: 50px;
     margin: 50px 50px;
 }

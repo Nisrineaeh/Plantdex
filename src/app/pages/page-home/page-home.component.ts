@@ -30,5 +30,10 @@ export class PageHomeComponent implements OnInit {
         this.plantsToDisplay = this.allPlant.filter((plant)=> categoryChild.includes(plant.categorie))
              
     }
+
+    aLecouteDeLaRecherche(userSearch:string[]){
+      console.log(`recherche de l'utilisateur`, userSearch)
+    
+    }
 }
 
