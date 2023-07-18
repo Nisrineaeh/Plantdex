@@ -9,7 +9,7 @@ import { Component, Input } from '@angular/core';
 export class FilterBarComponent {
   @Input() plantsCategorie!: string[];
 
-     onChangeCategory(e: Event) {
+     onCheckCategory(e: Event) {
      console.log(e);     
      const target = e.target as HTMLInputElement;
      console.log("valeur de la checkbox: ", target.value);
