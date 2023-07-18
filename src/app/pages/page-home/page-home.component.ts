@@ -23,7 +23,10 @@ export class PageHomeComponent implements OnInit {
         console.log(this.plantsCategorie);
       });
     }
-      aLecouteDeLenfant(categoriesChecked: string[]) {
-        
+      aLecouteDeLenfant(categoryChild: string[]) {
+        console.log('categoryChild', categoryChild)
+        if(categoryChild === this.plantsCategorie){
+          this.plantsToDisplay.includes()
+        }
     }
 }
