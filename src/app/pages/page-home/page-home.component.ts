@@ -12,21 +12,29 @@ export class PageHomeComponent implements OnInit {
   plantsToDisplay!: Plant[];
   plantsCategorie!: string[];
   filterCategorie!: string[];
+  allPlant: Plant[]=[];
 
     constructor(private plantService : PlantService){}
 
     ngOnInit(){
       this.plantService.getPlants().subscribe((data)=>{
         // console.log(data);
-        this.plantsToDisplay = data;
+        this.allPlant = [...data]
+        this.plantsToDisplay = [...data];
         this.plantsCategorie = [...new Set(this.plantsToDisplay.map((plant)=> plant.categorie))]
         console.log(this.plantsCategorie);
       });
     }
       aLecouteDeLenfant(categoryChild: string[]) {
         console.log('categoryChild', categoryChild)
-        if(categoryChild === this.plantsCategorie){
-          this.plantsToDisplay.includes()
-        }
+        // if(categoryChild.length === 0){
+        //   this.plantsToDisplay=[...this.allPlant];
+        // }else{
+          let plantFiltrer :Plant[] = [...this.allPlant];
+
+          this.plantsToDisplay = plantFiltrer.filter((plant)=> categoryChild.includes(plant.categorie))
+         
+        
+    
     }
 }
