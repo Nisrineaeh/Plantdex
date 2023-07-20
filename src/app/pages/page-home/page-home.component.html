@@ -1,5 +1,6 @@
 <div class="grid">
     <app-filter-bar [plantsCategorie]="plantsCategorie" (categItemEvent)="aLecouteDeLenfant($event)"></app-filter-bar>
     <div><h1 class="title">- Plantdex -</h1>
+        <app-search-bar (onEnterSearch)="aLecouteDeLaRecherche($event)"></app-search-bar>
     <app-plant-list [plantsRecupDeLaHome]="plantsToDisplay" ></app-plant-list></div>
 </div>

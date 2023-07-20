@@ -12,6 +12,10 @@ export class PageHomeComponent implements OnInit {
   plantsToDisplay!: Plant[];
   plantsCategorie!: string[];
   allPlant: Plant[]=[];
+  filteredPlant : Plant[] = [];
+  result! : Plant[];
+  
+  
 
     constructor(private plantService : PlantService){}
 
@@ -22,17 +26,23 @@ export class PageHomeComponent implements OnInit {
         this.plantsToDisplay = [...data];
         this.plantsCategorie = [...new Set(this.plantsToDisplay.map((plant)=> plant.categorie))]
         console.log(this.plantsCategorie);
+        this.filteredPlant = [...this.plantsToDisplay];
+
       });
     }
       aLecouteDeLenfant(categoryChild: string[]) {
         console.log('categoryChild', categoryChild)
-        
-        this.plantsToDisplay = this.allPlant.filter((plant)=> categoryChild.includes(plant.categorie))
-             
+        this.result = (this.plantsToDisplay = this.allPlant.filter((plant)=> categoryChild.includes(plant.categorie)))
+        console.log(this.result)
     }
 
-    aLecouteDeLaRecherche(userSearch:string[]){
-      console.log(`recherche de l'utilisateur`, userSearch)
+    aLecouteDeLaRecherche(e : Event){
+      const searchValueOk = e.target as HTMLInputElement;
+      this.plantsToDisplay = this.result.filter((plant) => {
+        if(plant.nom.toLowerCase().includes(searchValueOk.value.toLowerCase())){
+          return true;
+        }return false;
+      })
     
     }
 }

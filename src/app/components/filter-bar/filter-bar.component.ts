@@ -36,19 +36,33 @@ export class FilterBarComponent {
      
     }
 
-    onSearch(e: Event){
-      console.log(e,`ca c'est ton e`);
-      const target = e.target as HTMLInputElement;
-      console.log(`L'utilisateur recherche : `, target.value);
-      if(target.value != ""){
-        this.searchOption = target.value;
-      }else{
-        this.searchOption = "";
-      }
-      console.log(this.searchOption);
-      //emit de mon output
-      this.onEnterSearch.emit(this.searchOption);
-    }
+    // onSearch(e: Event){
+    //   console.log(e,`ca c'est ton e`);
+    //   const target = e.target as HTMLInputElement;
+    //   console.log(`L'utilisateur recherche : `, target.value);
+    //   if(target.value != ""){
+    //     this.searchOption = target.value;
+    //   }else{
+    //     this.searchOption = "";
+    //   }
+    //   console.log(this.searchOption);
+    //   //emit de mon output
+    //   this.onEnterSearch.emit(this.searchOption);
+    // }
+
+
+  // onSearching(e) {
+  //   this.searchOption = this..filter((user) => {
+  //     if (
+  //       user.name.first
+  //         .toLowerCase()
+  //         .includes(
+  //           e.target.value.toLowerCase() || user.name.last.toLowerCase()
+  //         )
+  //     ) {
+  //       return true;
+  //     }
+  //   });
 
     
 }
