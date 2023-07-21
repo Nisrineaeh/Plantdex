@@ -6,9 +6,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./search-bar.component.css']
 })
 export class SearchBarComponent implements OnInit {
-  @Output() onEnterSearch = new EventEmitter();
+  @Output() onEnterSearch = new EventEmitter<string>();
 
-  ngOnInit(): void {
-  
-  }
+  ngOnInit(): void {}
 }

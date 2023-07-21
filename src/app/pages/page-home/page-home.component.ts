@@ -13,7 +13,8 @@ export class PageHomeComponent implements OnInit {
   plantsCategorie!: string[];
   allPlant: Plant[]=[];
   filteredPlant : Plant[] = [];
-  result! : Plant[];
+  userInput!: string;
+  categoriesChecked!: string[];
 
   
   
@@ -33,22 +34,27 @@ export class PageHomeComponent implements OnInit {
     }
       aLecouteDeLenfant(categoryChild: string[]) {
         console.log('categoryChild', categoryChild)
-        this.plantsToDisplay = this.allPlant.filter((plant)=> categoryChild.includes(plant.categorie))
-        this.result = [...this.plantsToDisplay];
+        // this.plantsToDisplay = this.allPlant.filter((plant)=> categoryChild.includes(plant.categorie))
+        // this.result = [...this.plantsToDisplay];
+        this.categoriesChecked = categoryChild;
+        this.onUserInteractionFiltre()
     }
 
-    aLecouteDeLaRecherche(e : Event){
-      const searchValueOk = e.target as HTMLInputElement;
-      this.plantsToDisplay = this.allPlant.filter((plant) => {
-        if(plant.nom.toLowerCase().includes(searchValueOk.value.toLowerCase())){
-          return true;
-        }return false;
-      })
+      aLecouteDeLaRecherche(resultUserSearch : string){
+        // console.log(resultUserSearch);
+        // this.plantsToDisplay = this.allPlant.filter((plant) => plant.nom.toLowerCase().includes(this.userInput.toLowerCase()))
+        this.userInput = resultUserSearch;
+        this.onUserInteractionFiltre()
     }
 
-    // doubleSearch(){
-    //   if(this.result[categorie]){
-    //       console.log('coco')
-    //   }
-    // }
+      onUserInteractionFiltre() {
+        this.plantsToDisplay = [...this.allPlant];
+        if(this.userInput){
+          this.plantsToDisplay = this.plantsToDisplay.filter((plant)=> plant.nom.toLowerCase().includes(this.userInput.toLocaleLowerCase()))}
+        if(this.categoriesChecked){
+          this.plantsToDisplay = this.plantsToDisplay.filter((plant) => this.categoriesChecked.includes(plant.categorie))
+        }
+    }
+    
+
 }

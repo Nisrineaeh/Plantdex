@@ -4,8 +4,8 @@
 
         <div class="search">
             <i class="fa fa-search"></i>
-            <input type="text" class="form-control" placeholder="Rechercher votre plante..." (input)="onEnterSearch.emit($event)">
-
+            <input #resultSearch type="text" class="form-control" placeholder="Rechercher votre plante..." 
+            (input)="onEnterSearch.emit(resultSearch.value)">
         </div>
 
     </div>
