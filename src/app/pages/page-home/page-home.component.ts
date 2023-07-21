@@ -14,6 +14,7 @@ export class PageHomeComponent implements OnInit {
   allPlant: Plant[]=[];
   filteredPlant : Plant[] = [];
   result! : Plant[];
+
   
   
 
@@ -32,18 +33,22 @@ export class PageHomeComponent implements OnInit {
     }
       aLecouteDeLenfant(categoryChild: string[]) {
         console.log('categoryChild', categoryChild)
-        this.result = (this.plantsToDisplay = this.allPlant.filter((plant)=> categoryChild.includes(plant.categorie)))
-        console.log(this.result)
+        this.plantsToDisplay = this.allPlant.filter((plant)=> categoryChild.includes(plant.categorie))
+        this.result = [...this.plantsToDisplay];
     }
 
     aLecouteDeLaRecherche(e : Event){
       const searchValueOk = e.target as HTMLInputElement;
-      this.plantsToDisplay = this.result.filter((plant) => {
+      this.plantsToDisplay = this.allPlant.filter((plant) => {
         if(plant.nom.toLowerCase().includes(searchValueOk.value.toLowerCase())){
           return true;
         }return false;
       })
-    
     }
-}
 
+    // doubleSearch(){
+    //   if(this.result[categorie]){
+    //       console.log('coco')
+    //   }
+    // }
+}
