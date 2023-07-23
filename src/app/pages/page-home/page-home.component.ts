@@ -55,6 +55,16 @@ export class PageHomeComponent implements OnInit {
           this.plantsToDisplay = this.plantsToDisplay.filter((plant) => this.categoriesChecked.includes(plant.categorie))
         }
     }
-    
+    onSortByAlpha(){
+      this.plantsToDisplay.sort((a,b) => a.nom.localeCompare(b.nom));
+    }
 
-}
+    onSortByWater(){
+      this.plantsToDisplay.sort((a,b) => a.arrosage - b.arrosage);
+    }
+
+    onSortBySun(){
+
+      this.plantsToDisplay.sort((a, b) => b.soleil.localeCompare(a.soleil));
+    }
+    }
