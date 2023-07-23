@@ -8,4 +8,16 @@ import { Plant } from 'src/app/models/plant';
 })
 export class CardComponent {
   @Input() maplante!: Plant;
+
+  getIcons(value:string): any{
+    switch(value){
+      case 'beaucoup':
+        return ['soleil-plein','soleil-plein','soleil-plein'];
+      case 'moyen':
+        return ['soleil-plein', 'soleil-plein', 'soleil-vide'];
+      case 'peu':
+        return ['soleil-plein', 'soleil-vide', 'soleil-vide']
+    }
+      
+  }
 }
