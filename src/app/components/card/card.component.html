@@ -3,13 +3,11 @@
         <div class="card-body">
             <h5 class="card-title">{{maplante.nom}}</h5>
             <p class="card-text">Nécessite un ensoleillement {{maplante.soleil}} et un arrosage {{maplante.arrosage}} fois par semaine. Elle fait partie des {{maplante.categorie}}.</p>
-            <div *ngFor="let icon of getIcons(maplante.soleil)">
-                <app-icon iconSrc="/src/assets/icons.svg" iconAlt="icon de goutte d'eau vide"></app-icon>
-                <app-icon iconSrc="/src/assets/iconsgplein.svg" iconAlt="icon de goutte d'eau pleine"></app-icon>
-                <app-icon iconSrc="/src/assets/iconsunvide.svg" iconAlt="icon de soleil vide"></app-icon>
-                <app-icon iconSrc="/src/assets/iconsunplein.svg" iconAlt="icon de soleil plein"></app-icon>
+            <!-- <div *ngFor="let icon of getIcons(maplante.soleil, maplante.arrosage)">
+                <app-icon [iconSrc]="getIconSrc(icon)"></app-icon>
+
             
-            </div>
+            </div> -->
             <a href="#" class="btn btn-outline-success">Panier</a>
         </div>
     </div>
