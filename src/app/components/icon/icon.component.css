@@ -2,11 +2,18 @@ div{
     margin-bottom: 5px;
 }
 
-#goutte-pleine{
+.goutte-pleine{
     color: #329ff4;
 }
 
-#sun_plein{
-    color: #f1dd2f;
+.sun{
+    fill: black;
 }
 
+.sun_plein {
+    fill: #f1dd2f;
+}
+
+.sun_vide {
+  fill: black; /* Couleur pour les icônes de soleil vides */
+}

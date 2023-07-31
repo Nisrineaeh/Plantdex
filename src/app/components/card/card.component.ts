@@ -9,6 +9,17 @@ import { Plant } from 'src/app/models/plant';
 export class CardComponent {
   @Input() maplante!: Plant;
 
+  // getSoleilClass() {
+  //   const soleilValue = this.maplante.soleil;
+
+  //   if (soleilValue === 'peu') {
+  //     return "sun_plein" + "sun_vide" + "sun_vide";
+  //   } else if (soleilValue === 'moyen') {
+  //     return "sun_plein" + "sun_plein" + "sun_vide";
+  //   } else {
+  //     return "sun_plein" + "sun_plein" + "sun_plein";
+  //   }
+  // }
   // getIcons(soleil:string, arrosage:number): any{
   //   const icons : string[] = [];
   //   switch(soleil){
