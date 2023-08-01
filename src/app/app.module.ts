@@ -16,6 +16,8 @@ import { FilterBarComponent } from './components/filter-bar/filter-bar.component
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { IconComponent } from './components/icon/icon.component';
+import { SoleilComponent } from './components/soleil/soleil.component';
+import { GoutteComponent } from './components/goutte/goutte.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { IconComponent } from './components/icon/icon.component';
     FilterBarComponent,
     SearchBarComponent,
     SideBarComponent,
-    IconComponent
+    IconComponent,
+    SoleilComponent,
+    GoutteComponent
   ],
   imports: [
     BrowserModule,

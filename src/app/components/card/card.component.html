@@ -3,12 +3,42 @@
         <div class="card-body">
             <h5 class="card-title">{{maplante.nom}}</h5>
             <p class="card-text">Nécessite un ensoleillement {{maplante.soleil}} et un arrosage {{maplante.arrosage}} fois par semaine. Elle fait partie des {{maplante.categorie}}.</p>
-            <!-- <div *ngFor="let icon of getIcons(maplante.soleil, maplante.arrosage)">
-                <app-icon [iconSrc]="getIconSrc(icon)"></app-icon>
+        
+            <p *ngIf="maplante.arrosage === 3">
+                <app-goutte class="goutte_plein"></app-goutte>
+                <app-goutte class="goutte_plein"></app-goutte>
+                <app-goutte class="goutte_plein"></app-goutte>
+            </p>
+            <p *ngIf="maplante.arrosage === 2">
+                <app-goutte class="goutte_plein"></app-goutte>
+                <app-goutte class="goutte_plein"></app-goutte>
+                <app-goutte></app-goutte>
+            </p>
 
-            
-            </div> -->
-            <app-icon [plants]="maplante"><p *ngIf=""></p></app-icon>
+            <p *ngIf="maplante.arrosage === 0">
+                <app-goutte class="goutte_plein"></app-goutte>
+                <app-goutte></app-goutte>
+                <app-goutte></app-goutte>
+            </p>
+
+
+           <p *ngIf="maplante.soleil === 'beaucoup' ">
+                <app-soleil class="sun_plein"></app-soleil>
+                <app-soleil class="sun_plein"></app-soleil>
+                <app-soleil class="sun_plein"></app-soleil>
+            </p>
+
+            <p *ngIf="maplante.soleil === 'moyen' ">
+                <app-soleil class="sun_plein"></app-soleil>
+                <app-soleil class="sun_plein"></app-soleil>
+                <app-soleil></app-soleil>
+            </p>
+
+            <p *ngIf="maplante.soleil === 'peu' ">
+                <app-soleil class="sun_plein"></app-soleil>
+                <app-soleil></app-soleil>
+                <app-soleil></app-soleil>
+            </p>
             <a href="#" class="btn btn-outline-success">Panier</a>
         </div>
     </div>
