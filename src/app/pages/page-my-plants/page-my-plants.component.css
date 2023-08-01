@@ -1,0 +1,32 @@
+.card{
+    width: 50px;
+    margin-right: 20px;
+    margin-top: 10px;
+
+}
+
+.sun_plein {
+    color: #f1dd2f;
+}
+
+p{
+    display: flex;
+    margin-bottom: 10px;
+}
+.goutte_plein {
+    color: #0080ff;
+}
+
+p.goutte{
+    margin-bottom: 0px;;
+}
+
+app-goutte{
+    height: 20px;
+}
+
+.plant-list {
+  display: flex;
+  flex-wrap: wrap;
+ 
+}

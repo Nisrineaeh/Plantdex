@@ -1,9 +1,95 @@
-<p>en construction</p>
+<div *ngFor="let plant of maplante" class="plant-list">
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{plant.image}}" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{plant.nom}}</h5>
+            <p class="card-text">Nécessite un ensoleillement {{plant.soleil}} et un arrosage
+                {{plant.arrosage}} fois
+                par semaine. Elle fait partie des {{plant.categorie}}.</p>
+    
+            <p *ngIf="plant.arrosage === 3">
+                <app-goutte class="goutte_plein"></app-goutte>
+                <app-goutte class="goutte_plein"></app-goutte>
+                <app-goutte class="goutte_plein"></app-goutte>
+            </p>
+            <p *ngIf="plant.arrosage === 2">
+                <app-goutte class="goutte_plein"></app-goutte>
+                <app-goutte class="goutte_plein"></app-goutte>
+                <app-goutte></app-goutte>
+            </p>
+    
+            <p *ngIf="plant.arrosage === 0">
+                <app-goutte class="goutte_plein"></app-goutte>
+                <app-goutte></app-goutte>
+                <app-goutte></app-goutte>
+            </p>
+    
+    
+            <p *ngIf="plant.soleil === 'beaucoup' ">
+                <app-soleil class="sun_plein"></app-soleil>
+                <app-soleil class="sun_plein"></app-soleil>
+                <app-soleil class="sun_plein"></app-soleil>
+            </p>
+    
+            <p *ngIf="plant.soleil === 'moyen' ">
+                <app-soleil class="sun_plein"></app-soleil>
+                <app-soleil class="sun_plein"></app-soleil>
+                <app-soleil></app-soleil>
+            </p>
+    
+            <p *ngIf="plant.soleil === 'peu' ">
+                <app-soleil class="sun_plein"></app-soleil>
+                <app-soleil></app-soleil>
+                <app-soleil></app-soleil>
+            </p> 
 
-<!-- my-plants.component.html -->
-
-<div *ngIf="selectedPlant">
-    <!-- Affichez les détails de la plante sélectionnée ici -->
-    <h2>{{ selectedPlant.nom }}</h2>
-    <!-- ... Autres détails de la plante -->
+    
 </div>
+
+<!-- 
+<div *ngIf="selectedPlant">
+
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{selectedPlant.image}}" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{selectedPlant.nom}}</h5>
+            <p class="card-text">Nécessite un ensoleillement {{selectedPlant.soleil}} et un arrosage {{selectedPlant.arrosage}} fois
+                par semaine. Elle fait partie des {{selectedPlant.categorie}}.</p>
+    
+            <p *ngIf="selectedPlant.arrosage === 3">
+                <app-goutte class="goutte_plein"></app-goutte>
+                <app-goutte class="goutte_plein"></app-goutte>
+                <app-goutte class="goutte_plein"></app-goutte>
+            </p>
+            <p *ngIf="selectedPlant.arrosage === 2">
+                <app-goutte class="goutte_plein"></app-goutte>
+                <app-goutte class="goutte_plein"></app-goutte>
+                <app-goutte></app-goutte>
+            </p>
+    
+            <p *ngIf="selectedPlant.arrosage === 0">
+                <app-goutte class="goutte_plein"></app-goutte>
+                <app-goutte></app-goutte>
+                <app-goutte></app-goutte>
+            </p>
+    
+    
+            <p *ngIf="selectedPlant.soleil === 'beaucoup' ">
+                <app-soleil class="sun_plein"></app-soleil>
+                <app-soleil class="sun_plein"></app-soleil>
+                <app-soleil class="sun_plein"></app-soleil>
+            </p>
+    
+            <p *ngIf="selectedPlant.soleil === 'moyen' ">
+                <app-soleil class="sun_plein"></app-soleil>
+                <app-soleil class="sun_plein"></app-soleil>
+                <app-soleil></app-soleil>
+            </p>
+    
+            <p *ngIf="selectedPlant.soleil === 'peu' ">
+                <app-soleil class="sun_plein"></app-soleil>
+                <app-soleil></app-soleil>
+                <app-soleil></app-soleil>
+            </p> -->
+<!-- </div> -->
+

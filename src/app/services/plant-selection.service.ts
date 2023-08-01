@@ -5,13 +5,13 @@ import { Plant } from '../models/plant';
   providedIn: 'root'
 })
 export class PlantSelectionService {
-  private selectedPlant: Plant | null = null;
+  private selectedPlant: Plant[]=[];
   
   setSelectedPlant(plant:Plant){
-    this.selectedPlant = plant;
+    this.selectedPlant.push(plant);
   }
 
-  getSelectedPlant(): Plant | null{
+  getSelectedPlant(): Plant[]{
     return this.selectedPlant;
   }
 }

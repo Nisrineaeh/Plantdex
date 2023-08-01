@@ -11,13 +11,14 @@ import { PlantService } from 'src/app/services/plant.service';
 })
 export class CardComponent {
   @Input() maplante!: Plant;
+  
 
 
     
   constructor(private plantSS: PlantSelectionService) { }
 
-  onPlantSelected(plant: Plant) {
-    this.plantSS.setSelectedPlant(this.maplante);
+  onPlantSelected(maplante: Plant) {
+    this.plantSS.setSelectedPlant(maplante);
     console.log(this.maplante)
   }
 

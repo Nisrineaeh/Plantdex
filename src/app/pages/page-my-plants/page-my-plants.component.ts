@@ -10,10 +10,10 @@ import { PlantService } from 'src/app/services/plant.service';
   styleUrls: ['./page-my-plants.component.css']
 })
 export class PageMyPlantsComponent {
-  selectedPlant: Plant | null = null;
+  maplante: Plant[]=[];
 
   constructor(private plantSelectionService: PlantSelectionService) {
-    this.selectedPlant = this.plantSelectionService.getSelectedPlant();
+    this.maplante = this.plantSelectionService.getSelectedPlant();
   }
 }
 
