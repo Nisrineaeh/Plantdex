@@ -7,6 +7,7 @@ import{ Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class PlantService {
+  items: Plant[]=[];
 
   constructor(private http: HttpClient) { }
 
@@ -14,4 +15,7 @@ export class PlantService {
     return this.http.get<Plant[]>('http://localhost:3000/plants');
   }
 
+  onSelectPlant(plant: Plant) {
+    this.items.push(plant);
+  }
 }

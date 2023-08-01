@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Plant } from 'src/app/models/plant';
+import { PlantSelectionService } from 'src/app/services/plant-selection.service';
 
 @Component({
   selector: 'app-plant-list',
@@ -8,17 +9,9 @@ import { Plant } from 'src/app/models/plant';
 })
 export class PlantListComponent {
   @Input() plantsRecupDeLaHome!: Plant[];
-  selectedPlants!: Plant[];
 
-  onAddButtonClick(plant:Plant){
-    this.selectedPlants.push(plant);
-  }
- 
 
-//   onChangePlants(e: Event) {
-//     console.log(e);
-//     const target = e.target as HTMLInputElement;
-//     console.log("valeur de la checkbox: ", target.value);
-//     console.log("est t'elle coché ?: ", target.checked);
-//   }
+
+
+
 }

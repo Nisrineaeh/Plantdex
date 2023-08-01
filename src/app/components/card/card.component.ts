@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Plant } from 'src/app/models/plant';
+import { PlantSelectionService } from 'src/app/services/plant-selection.service';
 import { PlantService } from 'src/app/services/plant.service';
 
 @Component({
@@ -10,20 +11,20 @@ import { PlantService } from 'src/app/services/plant.service';
 })
 export class CardComponent {
   @Input() maplante!: Plant;
-  selectedPlant!: Plant;
 
-    constructor(private plantService: PlantService, private router: Router){}
+
+    
+  constructor(private plantSS: PlantSelectionService) { }
+
+  onPlantSelected(plant: Plant) {
+    this.plantSS.setSelectedPlant(this.maplante);
+    console.log(this.maplante)
+  }
+
   
-  onSelectPlant(e:Event){
-    console.log(e);
-    const target = e.target as HTMLButtonElement;
-    console.log("valeur de la card du button: ", this.maplante);
-     this.plantService.getPlants().subscribe(plants => {
-      const dataToSend = plants.length > 0 ? plants[0]:null;
-      this.router.navigate(['/my-plants'], {state:{data: dataToSend}});
-    })
-  }
 
-  }
+
+}
+
 
 
