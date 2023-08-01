@@ -1,9 +1,9 @@
-.card{
+/* .card{
     width: 50px;
     margin-right: 20px;
     margin-top: 10px;
 
-}
+} */
 
 .sun_plein {
     color: #f1dd2f;
@@ -28,5 +28,5 @@ app-goutte{
 .plant-list {
   display: flex;
   flex-wrap: wrap;
- 
+  justify-content: center;
 }
