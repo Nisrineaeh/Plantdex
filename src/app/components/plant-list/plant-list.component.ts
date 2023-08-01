@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Plant } from 'src/app/models/plant';
 
 @Component({
@@ -8,7 +8,13 @@ import { Plant } from 'src/app/models/plant';
 })
 export class PlantListComponent {
   @Input() plantsRecupDeLaHome!: Plant[];
-  
+  selectedPlants!: Plant[];
+
+  onAddButtonClick(plant:Plant){
+    this.selectedPlants.push(plant);
+  }
+ 
+
 //   onChangePlants(e: Event) {
 //     console.log(e);
 //     const target = e.target as HTMLInputElement;

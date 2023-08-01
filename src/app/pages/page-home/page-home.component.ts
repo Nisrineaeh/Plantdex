@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { PlantService } from 'src/app/services/plant.service';
 import { Plant } from 'src/app/models/plant';
+import { PlantListComponent } from 'src/app/components/plant-list/plant-list.component';
 
 @Component({
   selector: 'app-page-home',
@@ -16,10 +17,8 @@ export class PageHomeComponent implements OnInit {
   userInput!: string;
   categoriesChecked!: string[];
 
-  
-  
-
     constructor(private plantService : PlantService){}
+
 
     ngOnInit(){
       this.plantService.getPlants().subscribe((data)=>{

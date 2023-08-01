@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Plant } from 'src/app/models/plant';
 
 @Component({
   selector: 'app-page-my-plants',
@@ -6,5 +7,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./page-my-plants.component.css']
 })
 export class PageMyPlantsComponent {
-
 }
