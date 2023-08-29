@@ -54,6 +54,7 @@ export class PageHomeComponent implements OnInit {
           this.plantsToDisplay = this.plantsToDisplay.filter((plant) => this.categoriesChecked.includes(plant.categorie))
         }
     }
+
     onSortByAlpha(){
       this.plantsToDisplay.sort((a,b) => a.nom.localeCompare(b.nom));
     }
@@ -66,4 +67,4 @@ export class PageHomeComponent implements OnInit {
 
       this.plantsToDisplay.sort((a, b) => b.soleil.localeCompare(a.soleil));
     }
-    }
+  }
