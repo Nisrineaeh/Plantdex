@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { PlantService } from 'src/app/services/plant.service';
 import { Plant } from 'src/app/models/plant';
-import { PlantListComponent } from 'src/app/components/plant-list/plant-list.component';
+
 
 @Component({
   selector: 'app-page-home',
@@ -21,15 +21,22 @@ export class PageHomeComponent implements OnInit {
 
 
     ngOnInit(){
-      this.plantService.getPlants().subscribe((data)=>{
-        // console.log(data);
-        this.allPlant = [...data]
-        this.plantsToDisplay = [...data];
-        this.plantsCategorie = [...new Set(this.plantsToDisplay.map((plant)=> plant.categorie))]
-        console.log(this.plantsCategorie);
-        this.filteredPlant = [...this.plantsToDisplay];
-
+      this.plantService.getPlants().subscribe({
+        next: (response) => {
+          this.allPlant = [...response.data];
+          this.plantsToDisplay = [...response.data];
+          this.plantsCategorie = [...new Set(this.plantsToDisplay.map((plant) => plant.categorie))];
+          this.filteredPlant = [...this.plantsToDisplay];
+        },
+        error: (err) => {
+          console.error("Erreur lors de la récupération des plantes :", err);
+        },
+        complete: () => {
+          console.log("Récupération des plantes terminée.");
+        }
       });
+
+
     }
       aLecouteDeLenfant(categoryChild: string[]) {
         console.log('categoryChild', categoryChild)
