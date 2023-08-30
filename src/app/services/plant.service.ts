@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Plant } from '../models/plant';
 import{ Observable } from 'rxjs';
-import { Apireponse } from '../models/apireponse';
+import { Apireponse } from '../models/apirep';
 
 @Injectable({
   providedIn: 'root'

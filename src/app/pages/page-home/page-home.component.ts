@@ -30,9 +30,6 @@ export class PageHomeComponent implements OnInit {
         },
         error: (err) => {
           console.error("Erreur lors de la récupération des plantes :", err);
-        },
-        complete: () => {
-          console.log("Récupération des plantes terminée.");
         }
       });
 
