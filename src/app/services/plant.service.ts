@@ -10,6 +10,7 @@ import { ApiById } from '../models/api-by-id';
 })
 export class PlantService {
   items: Plant[]=[];
+  
 
   constructor(private http: HttpClient) { }
 
@@ -22,8 +23,6 @@ export class PlantService {
   }
 
   getPlantById(id:number): Observable<ApiById>{
-
-    
     return this.http.get<ApiById>(`http://localhost:3000/api/plants/${id}`)
   }
 }

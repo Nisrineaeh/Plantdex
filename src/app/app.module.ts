@@ -18,6 +18,8 @@ import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { SoleilComponent } from './components/soleil/soleil.component';
 import { GoutteComponent } from './components/goutte/goutte.component';
 import { PlantDetailComponent } from './components/plant-detail/plant-detail.component';
+import { TabAdminComponent } from './components/tab-admin/tab-admin.component';
+import { PlantAdminComponent } from './components/plant-admin/plant-admin.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,10 @@ import { PlantDetailComponent } from './components/plant-detail/plant-detail.com
     SideBarComponent,
     SoleilComponent,
     GoutteComponent,
-    PlantDetailComponent
+    PlantDetailComponent,
+    TabAdminComponent,
+    PlantAdminComponent,
+
   ],
   imports: [
     BrowserModule,
