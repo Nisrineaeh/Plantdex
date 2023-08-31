@@ -6,6 +6,7 @@ import { Plant } from '../models/plant';
 })
 export class PlantSelectionService {
   private selectedPlant: Plant[]=[];
+
   
   setSelectedPlant(plant:Plant){
     this.selectedPlant.push(plant);

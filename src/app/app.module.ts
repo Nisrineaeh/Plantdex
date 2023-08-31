@@ -17,6 +17,7 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
 import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { SoleilComponent } from './components/soleil/soleil.component';
 import { GoutteComponent } from './components/goutte/goutte.component';
+import { PlantDetailComponent } from './components/plant-detail/plant-detail.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { GoutteComponent } from './components/goutte/goutte.component';
     SearchBarComponent,
     SideBarComponent,
     SoleilComponent,
-    GoutteComponent
+    GoutteComponent,
+    PlantDetailComponent
   ],
   imports: [
     BrowserModule,
