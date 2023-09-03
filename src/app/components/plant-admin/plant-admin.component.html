@@ -1,4 +1,4 @@
 <div class="m-5">
-    <button class="btn btn-outline-success m-3">Ajouter</button>
+    <button class="btn btn-outline-success m-3" [routerLink]="['/add']">Ajouter</button>
     <app-tab-admin *ngFor="let plant of planteAdmin" [adminPlant]="plant" class="m-5"></app-tab-admin>
 </div>

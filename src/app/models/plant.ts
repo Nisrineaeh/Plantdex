@@ -1,5 +1,5 @@
 export interface Plant {
-    id:number;
+    id?:number;
     nom:string;
     soleil:string;
     arrosage:number;

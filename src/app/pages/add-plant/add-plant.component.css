@@ -1,0 +1,16 @@
+form{
+    display: flex;
+    flex-direction: column;
+    margin:50px;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    color: #188754;
+    margin-top:20px;
+}
+
+button{
+    margin-top:20px;
+}

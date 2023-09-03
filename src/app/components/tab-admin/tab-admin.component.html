@@ -17,8 +17,8 @@
             <td>{{adminPlant.categorie}}</td>
             <td>{{adminPlant.image}}</td>
             <td>
-                <div class="d-flex flex-column"><button class="btn btn-outline-success m-2">Modifier</button><button
-                        class="btn btn-outline-danger m-2">Supprimer</button></div>
+                <div class="d-flex flex-column"><button class="btn btn-outline-success m-2" [routerLink]="['/edit/', adminPlant.id]">Modifier</button><button
+                        class="btn btn-outline-danger m-2" (click)="onDelete()">Supprimer</button></div>
             </td>
         </tr>
     </tbody>

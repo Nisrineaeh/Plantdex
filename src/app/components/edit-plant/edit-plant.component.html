@@ -1,0 +1,21 @@
+<form [formGroup]="editPlantForm" (ngSubmit)="onPlantUpdated()">
+        <label for="code_plant">Code de la plante</label>
+        <input type="number" class="form-control" formControlName="code_plant" name="code_plant" id="code_plant">
+        
+        <label for="nom">Nom de la plante</label>
+        <input type="text" class="form-control" formControlName="nom" name="nom">
+        
+        <label for="soleil">Ensoleillement nécessaire</label>
+        <input type="text" class="form-control" formControlName="soleil" name="soleil" id="soleil">
+        
+        <label for="arrosage">Arrossage nécessaire</label>
+        <input type="number" class="form-control" formControlName="arrosage" name="arrosage" id="arrosage">
+        
+        <label for="categorie">Catégorie de la plante</label>
+        <input type="text" class="form-control" formControlName="categorie" name="categorie" id="categorie">
+        
+        <label for="image">Image</label>
+        <input type="text" class="form-control" formControlName="image" name="image" id="image">
+        
+        <button href="#" class="btn btn-outline-success">Modifier une plante</button>
+</form>

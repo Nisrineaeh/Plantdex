@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,6 +20,11 @@ import { GoutteComponent } from './components/goutte/goutte.component';
 import { PlantDetailComponent } from './components/plant-detail/plant-detail.component';
 import { TabAdminComponent } from './components/tab-admin/tab-admin.component';
 import { PlantAdminComponent } from './components/plant-admin/plant-admin.component';
+import { AddPlantComponent } from './pages/add-plant/add-plant.component';
+import { EditPlantComponent } from './components/edit-plant/edit-plant.component';
+import { SignupComponent } from './components/signup/signup.component';
+import { ConnexionComponent } from './pages/connexion/connexion.component';
+import { CoComponent } from './components/co/co.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +44,11 @@ import { PlantAdminComponent } from './components/plant-admin/plant-admin.compon
     PlantDetailComponent,
     TabAdminComponent,
     PlantAdminComponent,
+    AddPlantComponent,
+    EditPlantComponent,
+    SignupComponent,
+    ConnexionComponent,
+    CoComponent,
 
   ],
   imports: [
@@ -46,6 +56,7 @@ import { PlantAdminComponent } from './components/plant-admin/plant-admin.compon
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

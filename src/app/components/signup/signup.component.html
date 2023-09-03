@@ -1,0 +1,57 @@
+<h1>Formulaire d'inscription</h1>
+
+<form [formGroup]="inscriptionForm" (ngSubmit)="onSubmit()">
+    <ul>
+        <li>
+            <label for="name">Votre Nom :</label>
+            <input type="text" id="name" name="name" class="form-control" formControlName="name" required />
+            <div *ngIf="inscriptionForm.get('name')?.hasError('required') && inscriptionForm.get('name')?.touched">
+                Le nom est obligatoire.
+            </div>
+        </li>
+        <li>
+            <label for="username">Votre pseudo :</label>
+            <input type="text" id="username" name="utilisateur_username" class="form-control" formControlName="username"
+                required />
+            <div
+                *ngIf="inscriptionForm.get('username')?.hasError('unique') && inscriptionForm.get('username')?.touched">
+                Le pseudo est obligatoire.
+            </div>
+        </li>
+        <li>
+            <label for="email">Votre émail :</label>
+            <input type="email" id="email" name="utilisateur_email" class="form-control" formControlName="email"
+                placeholder="cheminverslapaix@exemple.com" required />
+            <div *ngIf="inscriptionForm.get('email')?.hasError('required') && inscriptionForm.get('email')?.touched">
+                L'email est obligatoire.
+            </div>
+            <div *ngIf="inscriptionForm.get('email')?.hasError('email') && inscriptionForm.get('email')?.touched">
+                L'email n'est pas au bon format.
+            </div>
+        </li>
+        <li>
+            <label for="password">Votre mot de passe :</label>
+            <input type="password" id="password" name="user_password" class="form-control"
+                formControlName="password" required />
+            <div id="passwordHelpBlock" class="form-text">
+                Votre mot de passe doit contenir entre 8-20 caractères.
+            </div>
+            <div
+                *ngIf="inscriptionForm.get('password')?.hasError('required') && inscriptionForm.get('password')?.touched">
+                Le mot de passe est obligatoire.
+            </div>
+
+        </li>
+        <li>
+            <label for="role">Votre role</label>
+            <select name="role" id="role" formControlName="role">
+                <option value="simpleUser">Simple Utilisateur</option>
+                <option value="admin">Administrateur</option>
+            </select>
+        </li>
+    </ul>
+
+    <div class="button">
+        <button type="submit" class="btn" [disabled]="!inscriptionForm.valid">S'inscrire</button>
+    </div>
+</form>
