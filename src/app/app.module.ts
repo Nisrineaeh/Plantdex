@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -25,6 +24,7 @@ import { EditPlantComponent } from './components/edit-plant/edit-plant.component
 import { SignupComponent } from './components/signup/signup.component';
 import { ConnexionComponent } from './pages/connexion/connexion.component';
 import { CoComponent } from './components/co/co.component';
+import { HeartComponent } from './components/heart/heart.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +49,7 @@ import { CoComponent } from './components/co/co.component';
     SignupComponent,
     ConnexionComponent,
     CoComponent,
+    HeartComponent,
 
   ],
   imports: [

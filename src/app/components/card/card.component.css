@@ -24,3 +24,7 @@ p.goutte{
 app-goutte{
     height: 20px;
 }
+
+app-heart{
+    margin-left: 10px;
+}
