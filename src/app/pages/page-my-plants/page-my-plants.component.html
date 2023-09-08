@@ -1,4 +1,4 @@
-<div *ngFor="let plant of maplante" class="plant-list">
+<!-- <div *ngFor="let plant of maplante" class="plant-list">
     <div class="card" style="width: 18rem;">
         <img class="card-img-top" src="{{plant.image}}" alt="Card image cap">
         <div class="card-body">
@@ -46,7 +46,7 @@
     
 </div>
 
-<!-- 
+
 <div *ngIf="selectedPlant">
 
     <div class="card" style="width: 18rem;">
@@ -93,3 +93,30 @@
             </p> -->
 <!-- </div> -->
 
+
+<div *ngIf="favorites.length > 0">
+    <h2>Mes Plantes Favorites</h2>
+    <div class="plant-list">
+        <div class="card" *ngFor="let plant of favorites">
+            <img class="card-img-top" [src]="plant.image" alt="{{ plant.nom }}">
+            <div class="card-body">
+                <h5 class="card-title">{{ plant.nom }}</h5>
+                <p class="card-text">Nécessite un ensoleillement {{ plant.soleil }} et un arrosage {{ plant.arrosage }}
+                    fois
+                    par semaine. Elle fait partie des {{ plant.categorie }}.</p>
+
+                <!-- Ici, vous pouvez ajouter des icônes pour l'arrosage et le soleil -->
+                <!-- Assurez-vous d'ajuster les conditions et les classes CSS selon vos besoins -->
+
+                <!-- Ajoutez un bouton ou une icône pour retirer la plante des favoris -->
+                <!-- <button (click)="removeFavorite(plant.id)" class="btn btn-danger">Retirer des favoris</button> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="favorites.length === 0">
+    <p>Aucune plante favorite pour le moment.</p>
+</div>
+
+ 

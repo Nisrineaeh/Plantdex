@@ -24,7 +24,7 @@ export class PlantDetailComponent implements OnInit{
     this.plantService.getPlantById(plantIdFromRoute).subscribe((plant) => {
       console.log(plant);
       
-      this.plant = plant.data;
+      this.plant = plant;
       console.log(this.plant);
    
     });

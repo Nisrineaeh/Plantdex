@@ -47,7 +47,8 @@ export class CoComponent {
             localStorage.setItem('access_token', token);
           
             if (response.email) {
-              localStorage.setItem('user_email', response.data.email);
+              localStorage.setItem('user_email', response.user_email);
+              localStorage.setItem('user_id', response.user_id);
             }
             console.log('Connexion réussie et token stocké!');
             console.log(response);

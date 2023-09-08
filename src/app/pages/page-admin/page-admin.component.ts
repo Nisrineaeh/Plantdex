@@ -24,8 +24,8 @@ export class PageAdminComponent {
   ngOnInit() {
     this.plantService.getPlants().subscribe({
       next: (response) => {
-        this.allPlant = [...response['data']];
-        this.plantsToDisplay = [...response['data']];
+        this.allPlant = [...response];
+        this.plantsToDisplay = [...response];
         this.plantsCategorie = [...new Set(this.plantsToDisplay.map((plant) => plant.categorie))];
         this.filteredPlant = [...this.plantsToDisplay];
       },

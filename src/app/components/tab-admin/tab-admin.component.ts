@@ -17,7 +17,7 @@ export class TabAdminComponent {
   ngOnInit(): void {
     this.plantService.getPlants().subscribe({
       next: (response) => {
-        this.plantsToDisplay = [...response.data]
+        this.plantsToDisplay = [...response]
         console.log(this.plantsToDisplay)
       }, error: (error) => {
         console.log('Erreur lors de la recup des plantes:', error)
@@ -36,6 +36,7 @@ export class TabAdminComponent {
         next: (response) => {
           console.log(response)
           alert('Vous avez bien supprimer votre plante ! :D')
+          location.reload
         }, error: (error) => {
           console.error('Erreur lors de la supp', error)
         }

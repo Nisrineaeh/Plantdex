@@ -17,7 +17,19 @@ export class AuthService {
     const body = {email: email, password :password}
     const headers = new HttpHeaders({'Authorization': 'Bearer ' + localStorage.getItem('access_token')})
     return this.http.post<Login>(this.bddURL + '/login', body, {headers: headers})
+      .pipe(
+        tap((response: Login) => {
+          if (response && response.user_id) {
+            localStorage.setItem('user_id', response.user_id.toString());
+          }
+          // Vous pouvez également stocker d'autres informations si nécessaire, comme un token d'accès.
+          // localStorage.setItem('access_token', response.access_token);
+        })
+      );
   }
 
-
+  getCurrentUserId(): number | undefined {
+    const userId = localStorage.getItem('user_id');
+    return userId ? parseInt(userId) : undefined;
+  }
 }

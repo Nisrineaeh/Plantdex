@@ -1,6 +1,9 @@
 <div class="card" style="width: 18rem;">
-    <app-heart></app-heart>
-        <img class="card-img-top" src="{{maplante.image}}" alt="Card image cap">
+    <app-heart [plantId]="maplante.id" (heartClick)="addToFavorites($event)"></app-heart>
+        <img class="card-img-top" [src]="getImageUrl()" alt="Card image cap">
+        <!-- <img [src]="'http://localhost:3000/uploads/' + maplante.image" alt="" srcset=""> -->
+       
+        <!-- <img [src]="maplante.image" alt="Plant/Image" srcset=""> -->
         <div class="card-body">
             <h5 class="card-title">{{maplante.nom}}</h5>
             <p class="card-text">Nécessite un ensoleillement {{maplante.soleil}} et un arrosage {{maplante.arrosage}} fois par semaine. Elle fait partie des {{maplante.categorie}}.</p>
